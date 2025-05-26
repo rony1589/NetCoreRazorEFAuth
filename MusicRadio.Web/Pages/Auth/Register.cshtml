@@ -1,0 +1,61 @@
+﻿@page
+@model MusicRadio.Web.Pages.Auth.RegisterModel
+@{
+    ViewData["Title"] = "Registro";
+    Layout = "_LayoutAuth"; 
+}
+
+<div class="register-header">
+    <h2>Crear cuenta</h2>
+    <p>Completa el formulario para registrarte</p>
+</div>
+<form method="post">
+    @await Html.PartialAsync("_OperationResult")
+    <div asp-validation-summary="ModelOnly" class="validation-error"></div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.Id" class="form-label"></label>
+        <input asp-for="RegisterVM.Id" class="form-control" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.Id" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.Name" class="form-label"></label>
+        <input asp-for="RegisterVM.Name" class="form-control" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.Mail" class="form-label"></label>
+        <input asp-for="RegisterVM.Mail" class="form-control" type="email" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.Mail" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.Direction" class="form-label"></label>
+        <input asp-for="RegisterVM.Direction" class="form-control" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.Direction" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.Phone" class="form-label"></label>
+        <input asp-for="RegisterVM.Phone" class="form-control" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.Phone" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.Password" class="form-label"></label>
+        <input asp-for="RegisterVM.Password" class="form-control" type="password" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RegisterVM.ConfirmPassword" class="form-label"></label>
+        <input asp-for="RegisterVM.ConfirmPassword" class="form-control" type="password" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="RegisterVM.ConfirmPassword" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn-auth">Registrarse</button>
+    <div class="auth-footer">
+        <span>¿Ya tienes una cuenta?</span>
+        <a asp-page="/Auth/Login" class="auth-link">Inicia sesión</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

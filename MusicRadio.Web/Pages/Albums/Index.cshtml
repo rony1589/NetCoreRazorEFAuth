@@ -1,0 +1,81 @@
+﻿@page
+@model MusicRadio.Web.Pages.Albums.IndexModel
+@{
+    ViewData["Title"] = "Lista de Álbumes";
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    @await Html.PartialAsync("_OperationResult")
+    <div asp-validation-summary="ModelOnly" class="validation-error"></div>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="header">
+            <h2><i class="fas fa-photo-video"></i> Álbumes</h2>
+        </div>
+        <a class="btn btn-primary" asp-page="Create">Crear Nuevo Álbum</a>
+    </div>
+    <input type="text" id="searchInput" placeholder="Buscar..." class="form-control mb-3" />
+    <table class="table table-striped" id="albumsTable">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.AlbumSet[0].Id)</th>
+                <th> @Html.DisplayNameFor(model => model.AlbumSet[0].Name)</th>
+                <th> @Html.DisplayNameFor(model => model.AlbumSet[0].Precio)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var album in Model.AlbumSet)
+            {
+                <tr>
+                    <td>@album.Id</td>
+                    <td>@album.Name</td>
+                    <td>@album.Precio</td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="id" value="@album.Id" />
+                            <input type="hidden" name="action" value="" id="actionInput-@album.Id" />
+                            <button type="submit" onclick="setAction(@album.Id, 'Editar')" class="btn btn-sm btn-outline-info">
+                                Editar
+                            </button>
+                            <button type="submit" onclick="setAction(@album.Id, 'Eliminar')" class="btn btn-sm btn-outline-danger">
+                                Eliminar
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const table = document.getElementById("albumsTable");
+        const rows = table.getElementsByTagName("tr");
+
+        searchInput.addEventListener("input", function () {
+            const filter = searchInput.value.toLowerCase();
+
+            for (let i = 1; i < rows.length; i++) { // Comienza desde 1 para omitir el encabezado
+                const cells = rows[i].getElementsByTagName("td");
+                let match = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    const cellText = cells[j].textContent.toLowerCase();
+                    if (cellText.includes(filter)) {
+                        match = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = match ? "" : "none";
+            }
+        });
+    });
+
+    function setAction(albumId, action) {
+        document.getElementById('actionInput-' + albumId).value = action;
+    }
+
+</script>

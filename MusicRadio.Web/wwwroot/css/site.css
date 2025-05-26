@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --text-color: #2b2d42;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --danger-color: #ef233c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+    .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+.side-menu {
+    min-width: 200px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+.side-menu .nav-link {
+    margin-bottom: 0.5rem;
+}
+
+    .side-menu .nav-link:hover {
+        background-color: #dee2e6;
+        border-radius: 0.25rem;
+    }
+
+/* Validación */
+.validation-error {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    .header h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+    }
+
+    .header p {
+        color: #6c757d;
+    }
+
+.song-form .form-label {
+    font-weight: 500;
+}
+
+.song-form .form-control,
+.song-form .form-select {
+    max-width: 500px;
+}
+
+.song-form button {
+    min-width: 120px;
+}

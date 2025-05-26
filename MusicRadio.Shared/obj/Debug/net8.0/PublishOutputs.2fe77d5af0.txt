@@ -1,0 +1,3 @@
+C:\Dir\Ronal\Desarrollos\MusicRadio\publish\MusicRadio.Shared.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\publish\MusicRadio.Shared.deps.json
+C:\Dir\Ronal\Desarrollos\MusicRadio\publish\MusicRadio.Shared.pdb

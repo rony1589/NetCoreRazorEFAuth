@@ -1,0 +1,17 @@
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Application.deps.json
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Application.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Application.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Core.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Shared.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Core.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\bin\Debug\net8.0\MusicRadio.Shared.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.csproj.AssemblyReference.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.AssemblyInfoInputs.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.AssemblyInfo.cs
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.csproj.CoreCompileInputs.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRad.2C52B713.Up2Date
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\refint\MusicRadio.Application.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\MusicRadio.Application.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Application\obj\Debug\net8.0\ref\MusicRadio.Application.dll

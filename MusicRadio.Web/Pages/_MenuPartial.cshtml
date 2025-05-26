@@ -1,0 +1,27 @@
+﻿@model string
+<div class="border-bottom bg-light p-3 side-menu">
+    <ul class="nav flex-column">
+        @if (Model == "DIRECTOR INVENTARIO")
+        {
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Albums/Index">
+                    <i class="fas fa-photo-video"></i> Álbumes
+                </a>
+             </li>
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Songs/Index">
+                    <i class="fas fa-music"></i> Canciones
+                </a>
+            </li>
+        }
+        else if (Model == "CLIENTE")
+        {
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Purchases/Index">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </a>
+            </li>
+        }
+
+    </ul>
+</div>

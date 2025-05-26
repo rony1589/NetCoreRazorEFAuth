@@ -1,0 +1,11 @@
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\bin\Debug\net8.0\MusicRadio.Shared.deps.json
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\bin\Debug\net8.0\MusicRadio.Shared.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\bin\Debug\net8.0\MusicRadio.Shared.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\MusicRadio.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\MusicRadio.Shared.AssemblyInfoInputs.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\MusicRadio.Shared.AssemblyInfo.cs
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\MusicRadio.Shared.csproj.CoreCompileInputs.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\MusicRadio.Shared.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\refint\MusicRadio.Shared.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\MusicRadio.Shared.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Shared\obj\Debug\net8.0\ref\MusicRadio.Shared.dll

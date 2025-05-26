@@ -1,0 +1,38 @@
+﻿@page
+@model MusicRadio.Web.Pages.Albums.DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Álbum";
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    @await Html.PartialAsync("_OperationResult")
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="header">
+            <h2 class="text-danger"><i class="fas fa-photo-video"></i> Confirmar Eliminación</h2>
+            <p class="header">¿Está seguro que desea eliminar el siguiente álbum?</p>
+        </div>
+        
+    </div>
+   
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AlbumVM.Id)</dt>
+        <dd class="col-sm-10">@Model.AlbumVM.Id</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AlbumVM.Name)</dt>
+        <dd class="col-sm-10">@Model.AlbumVM.Name</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AlbumVM.Precio)</dt>
+        <dd class="col-sm-10">@Model.AlbumVM.Precio</dd>
+    </dl>
+
+    <form method="post">
+        
+        @* <div asp-validation-summary="ModelOnly" class="validation-error"></div> *@
+        <input type="hidden" asp-for="@Model.AlbumVM.Id" />
+        <input type="hidden" asp-for="@Model.AlbumVM.Name" />
+        <input type="hidden" asp-for="@Model.AlbumVM.Precio" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a class="btn btn-secondary ms-2" asp-page="Index">Volver a la lista</a>
+    </form>
+</div>

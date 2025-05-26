@@ -1,0 +1,32 @@
+﻿@page
+@model MusicRadio.Web.Pages.Songs.DeleteModel
+<div class="container mt-4">
+    @await Html.PartialAsync("_OperationResult")
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="header">
+            <h2 class="text-danger"> <i class="fas fa-music"></i> Confirmar Eliminación</h2>
+            <p class="header">¿Está seguro que desea eliminar la siguiente canción?</p>
+        </div>
+
+    </div>
+
+    <dl class="row">
+        <dt class="col-sm-2">Id</dt>
+        <dd class="col-sm-10">@Model.SongVM.Id</dd>
+
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.SongVM.Name</dd>
+
+        <dt class="col-sm-2">Nombre Álbum</dt>
+        <dd class="col-sm-10">@Model.SongVM.AlbumSet!.Name</dd>
+    </dl>
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="validation-error"></div>
+        <input type="hidden" asp-for="@Model.SongVM.Id" />
+        <input type="hidden" asp-for="@Model.SongVM.Name" />
+        <input type="hidden" asp-for="@Model.SongVM.AlbumSet!.Name" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a class="btn btn-secondary ms-2" asp-page="Index">Volver a la lista</a>
+    </form>
+</div>

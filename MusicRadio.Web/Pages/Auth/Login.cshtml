@@ -1,0 +1,49 @@
+﻿@page
+@model MusicRadio.Web.Pages.Auth.LoginModel
+@{
+    ViewData["Title"] = "Iniciar sesión";
+    Layout = "_LayoutAuth";
+}
+
+<div class="auth-header">
+    <h2>Bienvenido</h2>
+    <p>Ingresa tus credenciales</p>
+</div>
+<form method="post">
+    @await Html.PartialAsync("_OperationResult")
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="validation-error"></div>
+@*     <div class="mb-3">
+        <label asp-for="LoginViewModel.Email" class="form-label"></label>
+        <input asp-for="LoginViewModel.Email" class="form-control" type="email" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="LoginViewModel.Email" class="text-danger"></span>
+    </div> *@
+    <div class="mb-3">
+        <label asp-for="LoginViewModel.Email" class="form-label"></label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            <input asp-for="LoginViewModel.Email" class="form-control" type="email" onblur="this.value=this.value.trim()" />
+        </div>
+        <span asp-validation-for="LoginViewModel.Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="LoginViewModel.Password" class="form-label"></label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            <input asp-for="LoginViewModel.Password" class="form-control" type="password" />
+        </div>
+        <span asp-validation-for="LoginViewModel.Password" class="text-danger"></span>
+    </div>
+   @*  <div class="mb-3">
+        <label asp-for="LoginViewModel.Password" class="form-label"></label>
+        <input asp-for="LoginViewModel.Password" class="form-control" type="password" onblur="this.value=this.value.trim()" />
+        <span asp-validation-for="LoginViewModel.Password" class="text-danger"></span>
+    </div> *@
+    <button type="submit" class="btn-auth">Iniciar Sesión</button>
+    <div class="auth-footer">
+        <a href="/Auth/Register" class="auth-link">¿No tienes cuenta? Regístrate</a>
+    </div>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

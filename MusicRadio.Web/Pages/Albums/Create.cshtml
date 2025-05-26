@@ -1,0 +1,37 @@
+﻿@page
+@model MusicRadio.Web.Pages.Albums.CreateModel
+@{
+    ViewData["Title"] = "Crear Álbum";
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    @await Html.PartialAsync("_OperationResult")
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="header">
+            <h2><i class="fas fa-photo-video"></i> Crear Álbum</h2>
+        </div>
+    </div>
+   
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="validation-error"></div>
+        <div class="mb-3">
+            <label asp-for="AlbumVM.Name" class="form-label"></label>
+            <input asp-for="AlbumVM.Name" class="form-control" onblur="this.value=this.value.trim()" />
+            <span asp-validation-for="AlbumVM.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="AlbumVM.Precio" class="form-label"></label>
+            <input asp-for="AlbumVM.Precio" class="form-control" type="number" step="0.01" min="0.01" lang="en" inputmode="decimal" pattern="[0-9]+([.][0-9]{1,2})?" />
+            <span asp-validation-for="AlbumVM.Precio" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Crear</button>
+        <a class="btn btn-secondary ms-2" asp-page="Index">Volver a la lista</a>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

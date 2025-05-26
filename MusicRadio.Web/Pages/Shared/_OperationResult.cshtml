@@ -1,0 +1,21 @@
+﻿@using System.Text.Json
+@using MusicRadio.Shared.Common
+
+@{
+    var operationJson = TempData["OperationResult"] as string;
+    var operationResult = !string.IsNullOrEmpty(operationJson)
+        ? JsonSerializer.Deserialize<OperationResult>(operationJson, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                })
+        : null;
+}
+
+@if (operationResult != null)
+{
+    <div class="alert @(operationResult.Success ? "alert-success" : "alert-danger")">
+        @operationResult.Message
+    </div>
+    // Limpiar después de mostrar
+    TempData.Remove("OperationResult");
+}

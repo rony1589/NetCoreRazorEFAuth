@@ -1,0 +1,11 @@
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\bin\Debug\net8.0\MusicRadio.Database.deps.json
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\bin\Debug\net8.0\MusicRadio.Database.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\bin\Debug\net8.0\MusicRadio.Database.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\MusicRadio.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\MusicRadio.Database.AssemblyInfoInputs.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\MusicRadio.Database.AssemblyInfo.cs
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\MusicRadio.Database.csproj.CoreCompileInputs.cache
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\MusicRadio.Database.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\refint\MusicRadio.Database.dll
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\MusicRadio.Database.pdb
+C:\Dir\Ronal\Desarrollos\MusicRadio\MusicRadio.Database\obj\Debug\net8.0\ref\MusicRadio.Database.dll
