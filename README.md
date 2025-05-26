@@ -22,6 +22,7 @@ La solución está organizada en los siguientes proyectos:
 
 
 ## 📁 Estructura de Carpetas
+```text
 MusicRadio/
 ├── MusicRadio.Core/
 │   ├── Entities/
@@ -130,6 +131,7 @@ MusicRadio/
 │   └── Program.cs
 │
 └── MusicRadio.sln
+```
 
 ## 🚀 Requisitos Previos
 Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
