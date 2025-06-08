@@ -22,7 +22,7 @@ La solución está organizada en los siguientes proyectos:
 
 - **MusicRadio.Database**: Incluye algunos .sql que son la estructura de los StoredProcedure  de las entidades AlbumSets y SongSets para Crear, Editar, Eliminar.
 
-- **MusicRadio.DatabaseCli**: Contiene la logica para desde comando de EF.
+- **MusicRadio.DatabaseCli**: Contiene la logica para que desde comando de EF se desplieguen los StoredProcedure.
 
 - **MusicRadio.Shared**: Incluye las clases que se comparten en todos los proyectos.
 
