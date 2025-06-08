@@ -1,7 +1,19 @@
 # 📚 MusicRadio
-MusicRadio es una aplicación web desarrollada con ASP.NET Core y Razor Pages que permite gestionar registrase como usuario para hacer compras de álbums y como Director de Inventario poder Ingresar, modificar y eliminar informacion de álbumes y canciones.
+**MusicRadio** es una simple aplicación web desarrollada con **ASP.NET Core 8**, **Razor Pages con bootstrap** y **Entity Framework Core**, cuyo principal objetivo es **mostrar algunas formas de cómo construir y organizar CRUDs** usando diferentes enfoques con EF Core: 
 
-## 🏗️ Arquitectura del Proyecto
+- **EF tradicional con LINQ**  
+- **Procedimientos almacenados (Stored Procedures)**  
+- **Uso de DTOs, mapeo automático, pruebas y principios SOLID**
+
+La solución está diseñada siguiendo una patrón de arquitectura **limpia, desacoplada y distribuida en capas**, altamente mantenible y orientada a buenas prácticas de desarrollo backend moderno.
+
+## 🎯 ¿Qué hace MusicRadio?
+
+Permite dos tipos de experiencia de usuario:
+- **Clientes**: pueden registrarse, explorar álbumes y realizar compras.
+- **Administradores de Inventario**: pueden ingresar, editar y eliminar álbumes y canciones del sistema.
+  
+## 🏗️🧱 Arquitectura de capas del Proyecto
 La solución está organizada en los siguientes proyectos:
 
 - **MusicRadio.Core**: Contiene las entidades del dominio y las interfaces de los servicios.
@@ -20,6 +32,33 @@ La solución está organizada en los siguientes proyectos:
 
 - **MusicRadio.Tests**: Contiene las pruebas unitarias para los servicios y controladores.
 
+## 🧠 Algunos Detalles Técnicos y Buenas Prácticas
+### 🔐 Autenticación y Seguridad
+
+- Implementación de **JWT (JSON Web Tokens)** para autenticación de usuarios.
+- El servicio `ITokenGenerator` encapsula la generación de tokens firmados.
+- Autenticación diferenciada por roles (usuarios comunes vs. administradores de inventario).
+
+### 🧰 Inyección de Dependencias
+
+- Toda la lógica de servicios y repositorios está registrada en `DependencyInjection.cs` y configurada mediante `IServiceCollection`.
+- Se sigue el patrón de inversión de dependencias para desacoplar la lógica de negocio del framework.
+
+### 💾 Acceso a Datos
+
+- Uso de **Entity Framework Core** con `DbContext` personalizado (`MusicRadioDbContext`).
+- Configuración detallada de entidades usando Fluent API (clases en `Configurations/`).
+- Soporte para procedimientos almacenados (`StoredProcedure`) para operaciones CRUD directas.
+
+### 🔄 Mapeo de Datos
+
+- Se utiliza **AutoMapper** para transformar entre entidades del dominio y DTOs/ViewModels.
+- Archivos `MappingProfile` y `WebMappingProfile` contienen las configuraciones de mapeo.
+
+### 🧪 Pruebas Unitarias
+
+- Pruebas de servicios y controladores usando xUnit.
+- Uso de clases base (`BasePruebas.cs`) para simular contexto de pruebas.
 
 ## 📁 Estructura de Carpetas
 ```text
